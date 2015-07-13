@@ -1,4 +1,4 @@
-# README #
+# Strum
 
 This repo contains all files related to Figure Inc.
 
