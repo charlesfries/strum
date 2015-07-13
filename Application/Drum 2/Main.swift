@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 class Main: UIViewController {
     
+    // MARK: Config
+    
+    var refreshRate = 0.005
+    var doneHold    = 200
+    
     // MARK: Outlets
     
     @IBOutlet weak var progress: UIView!
@@ -55,7 +60,7 @@ class Main: UIViewController {
         
         progress.addSubview(circle)
         
-        NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: "update", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(refreshRate, target: self, selector: "update", userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -97,7 +102,7 @@ class Main: UIViewController {
             print("Synced")
             
             toggle = false
-            hold = hold + 200
+            hold = hold + doneHold
             
             let player = MPMusicPlayerController.systemMusicPlayer()
             
