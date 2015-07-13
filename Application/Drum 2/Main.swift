@@ -46,19 +46,22 @@ class Main: UIViewController {
         
         changeColor(false)
 
-        circle                    = KYCircularProgress(frame: CGRectMake(0, 0, 170, 170))
-        circle.path               = UIBezierPath(arcCenter: CGPoint(x: 85, y: 85), radius: CGFloat(80), startAngle: CGFloat(3 * M_PI/2), endAngle: CGFloat(11), clockwise: true)
-        circle.colors             = [UIColor.whiteColor(), UIColor.whiteColor(), UIColor.whiteColor(), UIColor.whiteColor()]
-        circle.lineWidth          = 10
-        circle.showProgressGuide  = true
+        circle = KYCircularProgress(frame: CGRectMake(0, 0, 170, 170))
+        circle.path = UIBezierPath(arcCenter: CGPoint(x: 85, y: 85), radius: CGFloat(80), startAngle: CGFloat(3 * M_PI/2), endAngle: CGFloat(11), clockwise: true)
+        circle.colors = [UIColor.whiteColor(), UIColor.whiteColor(), UIColor.whiteColor(), UIColor.whiteColor()]
+        circle.lineWidth = 10
+        circle.showProgressGuide = true
         circle.progressGuideColor = UIColor(white: 1, alpha: 0.2)
         
         progress.addSubview(circle)
         
         NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: "update", userInfo: nil, repeats: true)
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
         if !launchedBefore  {
+            help()
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "launchedBefore")
         }
     }
@@ -127,7 +130,7 @@ class Main: UIViewController {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
                 
                 NSOperationQueue.mainQueue().addOperationWithBlock {
-                    UIView.animateWithDuration(0.5, animations: {
+                    UIView.animateWithDuration(0.75, animations: {
                         self.view.backgroundColor = color
                     })
                 }
