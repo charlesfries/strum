@@ -11,22 +11,21 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="1of-GV-ptl">
-                    <rect key="frame" x="222" y="174" width="156" height="251"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wih-YO-Oe9">
+                    <rect key="frame" x="241" y="271" width="119" height="58"/>
                     <animations/>
-                </imageView>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <animations/>
-            <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="1of-GV-ptl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9wP-pT-8JU"/>
-                <constraint firstItem="1of-GV-ptl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dUg-6x-ebF"/>
+                <constraint firstItem="wih-YO-Oe9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0Oz-Yy-ayX"/>
+                <constraint firstItem="wih-YO-Oe9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O1j-9j-Ufv"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="547.5" y="454.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="White Logo.png" width="156" height="251"/>
-    </resources>
 </document>

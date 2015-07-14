@@ -93,7 +93,7 @@ class Main: UIViewController {
                 message.text = "Tap at any time in the desired 10 second wndow."
             } else {
                 button.setTitle("Cancel", forState: .Normal)
-                message.text = "Synced music will play in \((10 - (UInt8(Float(NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second % 10))))) second(s)..."
+                message.text = "Synced music will play in \((10 - (UInt8(Float(NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second % 10)))))..."
             }
         }
         
@@ -133,7 +133,6 @@ class Main: UIViewController {
         
         if animated {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                
                 NSOperationQueue.mainQueue().addOperationWithBlock {
                     UIView.animateWithDuration(0.75, animations: {
                         self.view.backgroundColor = color
@@ -153,13 +152,14 @@ class Main: UIViewController {
         } else {
             toggle = true
             button.setTitle("Cancel", forState: .Normal)
-            message.text = "Synced music will play in \((10 - (UInt8(Float(NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second % 10))))) second(s)..."
+            message.text = "Synced music will play in \((10 - (UInt8(Float(NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second % 10)))))..."
         }
     }
     
     // MARK: Actions
     
     @IBAction func tap() {
+        
         let seconds = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second
         
         // Make up for overlap
@@ -171,7 +171,7 @@ class Main: UIViewController {
     }
     
     @IBAction func help() {
-        let alert: UIAlertController = UIAlertController(title: "Help", message: "1. Open the Music app and play a song.\n2. Each party who wants to sync must select Tap to Sync in the same window.\n3. Wait for the window to close, and enjoy listening to your synced music!", preferredStyle: .Alert)
+        let alert: UIAlertController = UIAlertController(title: "Help", message: "1. Open the Music app and play a song on each device.\n\n2. Reopen Strum and tap “Tap to Sync.” Each device must tap anytime within the same color window.\n\n3. Wait for the 10-second countdown to expire and enjoy your multi-device music!", preferredStyle: .Alert)
         //alert.view.tintColor = UIColor(red:1, green:0.4, blue:0.4, alpha:1)
         alert.addAction(UIAlertAction(title: "Okay", style: .Cancel) { action -> Void in })
         presentViewController(alert, animated: true, completion: nil)
