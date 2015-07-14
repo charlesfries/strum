@@ -47,10 +47,11 @@ class Main: UIViewController {
     // MARK: Methods
     
     override func viewDidLoad() {
+        
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         changeColor(false)
-
+        
         circle = KYCircularProgress(frame: CGRectMake(0, 0, 170, 170))
         circle.path = UIBezierPath(arcCenter: CGPoint(x: 85, y: 85), radius: CGFloat(80), startAngle: CGFloat(3 * M_PI/2), endAngle: CGFloat(11), clockwise: true)
         circle.colors = [UIColor.whiteColor(), UIColor.whiteColor(), UIColor.whiteColor(), UIColor.whiteColor()]

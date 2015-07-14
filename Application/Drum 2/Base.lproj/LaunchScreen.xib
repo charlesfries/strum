@@ -25,7 +25,7 @@
                 <constraint firstItem="wih-YO-Oe9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0Oz-Yy-ayX"/>
                 <constraint firstItem="wih-YO-Oe9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O1j-9j-Ufv"/>
             </constraints>
-            <point key="canvasLocation" x="547.5" y="454.5"/>
+            <point key="canvasLocation" x="399" y="405"/>
         </view>
     </objects>
 </document>
