@@ -65,6 +65,8 @@ class Main: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        
+        // Initially show help view
         let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
         if !launchedBefore  {
             help()
@@ -172,7 +174,8 @@ class Main: UIViewController {
     }
     
     @IBAction func help() {
-        let alert: UIAlertController = UIAlertController(title: "Help", message: "1. Open the Music app and play a song on each device.\n\n2. Reopen Strum and tap “Tap to Sync.” Each device must tap anytime within the same color window.\n\n3. Wait for the 10-second countdown to expire and enjoy your multi-device music!", preferredStyle: .Alert)
+        
+        let alert: UIAlertController = UIAlertController(title: "Help", message: "1. Open the Music app and play the same song on each device.\n\n2. Reopen Strum and tap “Tap to Sync.” Each device must tap anytime within the same color window.\n\n3. Wait for the 10-second countdown to expire and enjoy your multi-device music!", preferredStyle: .Alert)
         //alert.view.tintColor = UIColor(red:1, green:0.4, blue:0.4, alpha:1)
         alert.addAction(UIAlertAction(title: "Okay", style: .Cancel) { action -> Void in })
         presentViewController(alert, animated: true, completion: nil)
