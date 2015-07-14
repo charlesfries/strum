@@ -36,7 +36,6 @@ class Main: UIViewController {
     @IBOutlet weak var progress: UIView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var message: UILabel!
     
     // MARK: Globals
     
@@ -93,10 +92,8 @@ class Main: UIViewController {
         } else {
             if !toggle {
                 button.setTitle("Tap to Sync", forState: .Normal)
-                message.text = "Tap at any time in the desired 10 second wndow."
             } else {
                 button.setTitle("Cancel", forState: .Normal)
-                message.text = "Synced music will play in \((10 - (UInt8(Float(NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second % 10)))))..."
             }
         }
         
@@ -125,7 +122,7 @@ class Main: UIViewController {
         } else if seconds >= 10 && seconds < 20 { // 10 to 19
             color = UIColor(red:1, green:0.8, blue:0.43, alpha:1)
         } else if seconds >= 20 && seconds < 30 { // 20 to 29
-            color = UIColor(red:0.88, green:0.84, blue:0.18, alpha:1)
+            color = UIColor(red:0.78, green:0.77, blue:0.35, alpha:1)
         } else if seconds >= 30 && seconds < 40 { // 30 to 39
             color = UIColor(red:0.24, green:0.79, blue:0.42, alpha:1)
         } else if seconds >= 40 && seconds < 50 { // 40 to 49
@@ -151,11 +148,9 @@ class Main: UIViewController {
         if toggle {
             toggle = false
             button.setTitle("Tap to Sync", forState: .Normal)
-            message.text = "Tap at any time in the desired 10 second wndow."
         } else {
             toggle = true
             button.setTitle("Cancel", forState: .Normal)
-            message.text = "Synced music will play in \((10 - (UInt8(Float(NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second % 10)))))..."
         }
     }
     

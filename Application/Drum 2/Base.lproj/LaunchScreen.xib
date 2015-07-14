@@ -11,21 +11,25 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wih-YO-Oe9">
-                    <rect key="frame" x="241" y="271" width="119" height="58"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="imI-ny-82y">
+                    <rect key="frame" x="200" y="200" width="200" height="200"/>
                     <animations/>
-                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="FD6-Hz-mxX"/>
+                        <constraint firstAttribute="width" constant="200" id="edP-BS-1hD"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="wih-YO-Oe9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0Oz-Yy-ayX"/>
-                <constraint firstItem="wih-YO-Oe9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O1j-9j-Ufv"/>
+                <constraint firstItem="imI-ny-82y" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9eb-P4-QH7"/>
+                <constraint firstItem="imI-ny-82y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="d8Q-ku-cRl"/>
             </constraints>
             <point key="canvasLocation" x="399" y="405"/>
         </view>
     </objects>
+    <resources>
+        <image name="Icon.png" width="1024" height="1024"/>
+    </resources>
 </document>

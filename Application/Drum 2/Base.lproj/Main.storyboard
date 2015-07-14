@@ -60,13 +60,6 @@
                                     <action selector="help" destination="Msv-rC-Zn9" eventType="touchUpInside" id="kRq-JS-slJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tap at any time in the desired 10 second wndow." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n8-wa-WJi">
-                                <rect key="frame" x="164" y="493" width="272" height="15"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,11 +72,9 @@
                             <constraint firstItem="KnB-v2-TXB" firstAttribute="top" secondItem="5aN-66-KpU" secondAttribute="bottom" constant="30" id="79f-3i-nQh"/>
                             <constraint firstItem="QuF-DS-ZQ2" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="JUW-as-OaC"/>
                             <constraint firstItem="d37-l7-cj2" firstAttribute="top" secondItem="Bpq-BN-e3s" secondAttribute="bottom" constant="20" id="ZJS-WA-3WR"/>
-                            <constraint firstItem="4n8-wa-WJi" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="aW4-jN-xbH"/>
                             <constraint firstItem="ACb-WE-ZvI" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="bUz-fd-QHJ"/>
                             <constraint firstItem="ACb-WE-ZvI" firstAttribute="top" secondItem="KnB-v2-TXB" secondAttribute="bottom" constant="30" id="dsZ-Jm-Wae"/>
                             <constraint firstItem="nzg-VJ-U2R" firstAttribute="top" secondItem="Fic-Kk-Lvh" secondAttribute="bottom" constant="8" id="hem-BF-cBP"/>
-                            <constraint firstItem="4n8-wa-WJi" firstAttribute="top" secondItem="ACb-WE-ZvI" secondAttribute="bottom" constant="8" id="iEe-o1-gAy"/>
                             <constraint firstItem="Fic-Kk-Lvh" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="kV4-A1-evB"/>
                             <constraint firstItem="KnB-v2-TXB" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="vUa-zG-QNa"/>
                         </constraints>
@@ -95,7 +86,6 @@
                     <connections>
                         <outlet property="button" destination="ACb-WE-ZvI" id="bAQ-aG-ubR"/>
                         <outlet property="label" destination="QuF-DS-ZQ2" id="Bso-1D-gp9"/>
-                        <outlet property="message" destination="4n8-wa-WJi" id="H7U-1T-QTq"/>
                         <outlet property="progress" destination="KnB-v2-TXB" id="Ubz-tJ-CVO"/>
                     </connections>
                 </viewController>
@@ -106,7 +96,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1819" y="-297"/>
+            <point key="canvasLocation" x="1467" y="-263"/>
         </scene>
     </scenes>
 </document>

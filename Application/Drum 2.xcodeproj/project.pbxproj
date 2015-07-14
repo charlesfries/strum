@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77A47D891B54B88B00E99326 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A47D881B54B88B00E99326 /* Icon.png */; };
 		77B34E4E1B492FFB00C8EE5A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B34E4D1B492FFB00C8EE5A /* Main.swift */; };
 		77B34E511B492FFB00C8EE5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B34E4F1B492FFB00C8EE5A /* Main.storyboard */; };
 		77B34E531B492FFB00C8EE5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B34E521B492FFB00C8EE5A /* Images.xcassets */; };
 		77B34E561B492FFB00C8EE5A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B34E541B492FFB00C8EE5A /* LaunchScreen.xib */; };
 		77BD5C8E1B50DB4B001413F9 /* KYCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD5C8D1B50DB4B001413F9 /* KYCircularProgress.swift */; };
-		77CF30E01B51FE3A001A556C /* White Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 77CF30DF1B51FE3A001A556C /* White Logo.png */; };
 		77F392EE1B506A1200BB40EC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F392ED1B506A1200BB40EC /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77A47D881B54B88B00E99326 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		77B34E461B492FFB00C8EE5A /* Drum 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drum 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B34E4A1B492FFB00C8EE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B34E4D1B492FFB00C8EE5A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		77B34E521B492FFB00C8EE5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77B34E551B492FFB00C8EE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		77BD5C8D1B50DB4B001413F9 /* KYCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCircularProgress.swift; sourceTree = "<group>"; };
-		77CF30DF1B51FE3A001A556C /* White Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "White Logo.png"; sourceTree = "<group>"; };
 		77F392ED1B506A1200BB40EC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,7 +65,7 @@
 				77B34E521B492FFB00C8EE5A /* Images.xcassets */,
 				77B34E4A1B492FFB00C8EE5A /* Info.plist */,
 				77BD5C8D1B50DB4B001413F9 /* KYCircularProgress.swift */,
-				77CF30DF1B51FE3A001A556C /* White Logo.png */,
+				77A47D881B54B88B00E99326 /* Icon.png */,
 				77F392ED1B506A1200BB40EC /* iAd.framework */,
 			);
 			path = "Drum 2";
@@ -132,7 +132,7 @@
 			files = (
 				77B34E511B492FFB00C8EE5A /* Main.storyboard in Resources */,
 				77B34E561B492FFB00C8EE5A /* LaunchScreen.xib in Resources */,
-				77CF30E01B51FE3A001A556C /* White Logo.png in Resources */,
+				77A47D891B54B88B00E99326 /* Icon.png in Resources */,
 				77B34E531B492FFB00C8EE5A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
