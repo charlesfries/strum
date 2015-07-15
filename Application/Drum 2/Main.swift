@@ -40,10 +40,30 @@ class Main: UIViewController {
     // MARK: Globals
     
     var circle: KYCircularProgress!
-    var toggle = false
+    var startToggle = false
     var hold = 0
     
+    var modifier = 0
+    
     // MARK: Methods
+    
+    
+    @IBAction func left() {
+        
+        
+        modifier = modifier + 10
+        
+        print("Left \(modifier)")
+    }
+    
+    @IBAction func right() {
+        
+        
+        modifier = modifier - 10
+        
+        print("Right \(modifier)")
+    }
+    
     
     override func viewDidLoad() {
         
@@ -90,7 +110,7 @@ class Main: UIViewController {
             hold--
             button.setTitle("Done!", forState: .Normal)
         } else {
-            if !toggle {
+            if !startToggle {
                 button.setTitle("Tap to Sync", forState: .Normal)
             } else {
                 button.setTitle("Cancel", forState: .Normal)
@@ -98,10 +118,10 @@ class Main: UIViewController {
         }
         
         // Fire if appropriate
-        if seconds % 10 == 0 && toggle  {
+        if seconds % 10 == 0 && startToggle  {
             print("Synced")
             
-            toggle = false
+            startToggle = false
             hold = hold + doneHold
             
             let player = MPMusicPlayerController.systemMusicPlayer()
@@ -145,18 +165,18 @@ class Main: UIViewController {
     }
     
     func change() {
-        if toggle {
-            toggle = false
+        if startToggle {
+            startToggle = false
             button.setTitle("Tap to Sync", forState: .Normal)
         } else {
-            toggle = true
+            startToggle = true
             button.setTitle("Cancel", forState: .Normal)
         }
     }
     
     // MARK: Actions
     
-    @IBAction func tap() {
+    @IBAction func start() {
         
         let seconds = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second
         

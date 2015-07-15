@@ -80,6 +80,8 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="5TH-aT-HiA" appends="YES" id="zyi-yZ-4mX"/>
+                            <outletCollection property="gestureRecognizers" destination="WDN-OB-o4b" appends="YES" id="0zU-hI-o08"/>
+                            <outletCollection property="gestureRecognizers" destination="8vw-s3-e0J" appends="YES" id="efT-Us-nlj"/>
                         </connections>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -92,9 +94,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JX9-sb-EiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="5TH-aT-HiA">
                     <connections>
-                        <action selector="tap" destination="Msv-rC-Zn9" id="q8e-ez-D87"/>
+                        <action selector="start" destination="Msv-rC-Zn9" id="yyC-um-CEF"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="WDN-OB-o4b">
+                    <connections>
+                        <action selector="left" destination="Msv-rC-Zn9" id="fHx-ig-CnO"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="8vw-s3-e0J">
+                    <connections>
+                        <action selector="right" destination="Msv-rC-Zn9" id="guK-Lk-9cn"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1467" y="-263"/>
         </scene>
