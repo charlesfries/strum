@@ -58,7 +58,6 @@ class Main: UIViewController {
     
     @IBAction func right() {
         
-        
         modifier = modifier - 10
         
         print("Right \(modifier)")
