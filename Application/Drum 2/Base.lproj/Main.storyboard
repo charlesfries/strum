@@ -23,21 +23,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="0.0" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2015 Figure Inc." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fic-Kk-Lvh">
-                                <rect key="frame" x="249" y="577" width="103" height="14.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACb-WE-ZvI">
-                                <rect key="frame" x="188" y="415" width="225" height="70"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
-                                <state key="normal" title="Tap to Sync">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuF-DS-ZQ2">
                                 <rect key="frame" x="266" y="271" width="68" height="57.5"/>
                                 <animations/>
@@ -60,6 +45,24 @@
                                     <action selector="help" destination="Msv-rC-Zn9" eventType="touchUpInside" id="kRq-JS-slJ"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="11" currentPage="5" translatesAutoresizingMaskIntoConstraints="NO" id="uXe-7r-6z5">
+                                <rect key="frame" x="217" y="563" width="167" height="37"/>
+                                <animations/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tap to Sync" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8H-Wh-LrN">
+                                <rect key="frame" x="188" y="415" width="225" height="58"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▾" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tq-Bh-fs1">
+                                <rect key="frame" x="296" y="560" width="7" height="15"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,12 +74,15 @@
                             <constraint firstItem="QuF-DS-ZQ2" firstAttribute="centerY" secondItem="cow-KX-Su4" secondAttribute="centerY" id="5hC-5v-YVd"/>
                             <constraint firstItem="KnB-v2-TXB" firstAttribute="top" secondItem="5aN-66-KpU" secondAttribute="bottom" constant="30" id="79f-3i-nQh"/>
                             <constraint firstItem="QuF-DS-ZQ2" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="JUW-as-OaC"/>
+                            <constraint firstItem="nzg-VJ-U2R" firstAttribute="top" secondItem="uXe-7r-6z5" secondAttribute="bottom" id="NF9-4Z-zfZ"/>
+                            <constraint firstItem="I8H-Wh-LrN" firstAttribute="top" secondItem="KnB-v2-TXB" secondAttribute="bottom" constant="30" id="OJe-q4-enR"/>
                             <constraint firstItem="d37-l7-cj2" firstAttribute="top" secondItem="Bpq-BN-e3s" secondAttribute="bottom" constant="20" id="ZJS-WA-3WR"/>
-                            <constraint firstItem="ACb-WE-ZvI" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="bUz-fd-QHJ"/>
-                            <constraint firstItem="ACb-WE-ZvI" firstAttribute="top" secondItem="KnB-v2-TXB" secondAttribute="bottom" constant="30" id="dsZ-Jm-Wae"/>
-                            <constraint firstItem="nzg-VJ-U2R" firstAttribute="top" secondItem="Fic-Kk-Lvh" secondAttribute="bottom" constant="8" id="hem-BF-cBP"/>
-                            <constraint firstItem="Fic-Kk-Lvh" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="kV4-A1-evB"/>
+                            <constraint firstItem="uXe-7r-6z5" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="eod-Rr-rIe"/>
+                            <constraint firstItem="0tq-Bh-fs1" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="gSl-jz-7dh"/>
+                            <constraint firstItem="nzg-VJ-U2R" firstAttribute="top" secondItem="0tq-Bh-fs1" secondAttribute="bottom" constant="25" id="j5p-le-gpH"/>
+                            <constraint firstItem="0tq-Bh-fs1" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="oT4-ye-7bH"/>
                             <constraint firstItem="KnB-v2-TXB" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="vUa-zG-QNa"/>
+                            <constraint firstItem="I8H-Wh-LrN" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="xCs-0S-9Sb"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="5TH-aT-HiA" appends="YES" id="zyi-yZ-4mX"/>
@@ -86,8 +92,9 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="button" destination="ACb-WE-ZvI" id="bAQ-aG-ubR"/>
+                        <outlet property="button" destination="I8H-Wh-LrN" id="xKm-qv-zuJ"/>
                         <outlet property="label" destination="QuF-DS-ZQ2" id="Bso-1D-gp9"/>
+                        <outlet property="pageControl" destination="uXe-7r-6z5" id="lx3-Ot-m3C"/>
                         <outlet property="progress" destination="KnB-v2-TXB" id="Ubz-tJ-CVO"/>
                     </connections>
                 </viewController>
@@ -108,7 +115,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1467" y="-263"/>
+            <point key="canvasLocation" x="1292" y="-371"/>
         </scene>
     </scenes>
 </document>
