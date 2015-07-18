@@ -32,7 +32,6 @@ class Main: UIViewController {
     var startToggle = false
     
     @IBOutlet var lastColor: UILabel!
-    //@IBOutlet var marker: UILabel!
     @IBOutlet var pageControl: UIPageControl!
     var page = 5
     
@@ -58,7 +57,7 @@ class Main: UIViewController {
         
         let seconds = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second
         
-        print("Real: \(seconds)")
+        //print("Real: \(seconds)")
         
         var modifier = 0
         
@@ -83,8 +82,8 @@ class Main: UIViewController {
         
         let newSeconds = seconds - modifier
         
-        print(" Mod: \(modifier)")
-        print(" New: \(newSeconds)")
+        //print(" Mod: \(modifier)")
+        //print(" New: \(newSeconds)")
         
         // Color Selection //////////////////////////////////////////////////
         var color = UIColor()
@@ -94,11 +93,11 @@ class Main: UIViewController {
         }
         // Orange
         else if (newSeconds >= 10 && newSeconds < 20) || (newSeconds >= -50 && newSeconds < -40) {
-            color = UIColor(red:1, green:0.8, blue:0.43, alpha:1)
+            color = UIColor(red:0.99, green:0.5, blue:0.14, alpha:1)
         }
         // Yellow
         else if (newSeconds >= 20 && newSeconds < 30) || (newSeconds >= -40 && newSeconds < -30) {
-            color = UIColor(red:0.78, green:0.77, blue:0.35, alpha:1)
+            color = UIColor(red:0.89, green:0.89, blue:0.19, alpha:1)
         }
         // Green
         else if (newSeconds >= 30 && newSeconds < 40) || (newSeconds >= -30 && newSeconds < -20) {

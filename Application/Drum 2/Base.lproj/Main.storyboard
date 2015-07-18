@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main-->
@@ -61,32 +62,33 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIq-lk-Wac">
+                                <rect key="frame" x="558" y="40" width="22" height="22"/>
+                                <animations/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.37326954455964267" blue="0.17942666839986199" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="KnB-v2-TXB" firstAttribute="centerY" secondItem="cow-KX-Su4" secondAttribute="centerY" id="3ch-Hx-kOj"/>
-                            <constraint firstItem="5aN-66-KpU" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="5eu-jM-zuH"/>
-                            <constraint firstItem="QuF-DS-ZQ2" firstAttribute="centerY" secondItem="cow-KX-Su4" secondAttribute="centerY" id="5hC-5v-YVd"/>
-                            <constraint firstItem="KnB-v2-TXB" firstAttribute="top" secondItem="5aN-66-KpU" secondAttribute="bottom" constant="30" id="79f-3i-nQh"/>
-                            <constraint firstItem="Efe-SR-urA" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="95A-3H-ghQ"/>
-                            <constraint firstItem="qEO-Vr-RhS" firstAttribute="leading" secondItem="uXe-7r-6z5" secondAttribute="trailing" constant="8" id="Av9-UA-skL"/>
-                            <constraint firstItem="QuF-DS-ZQ2" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="JUW-as-OaC"/>
-                            <constraint firstItem="qEO-Vr-RhS" firstAttribute="top" secondItem="Efe-SR-urA" secondAttribute="bottom" constant="8" id="Jdu-Sf-Pxv"/>
-                            <constraint firstItem="nzg-VJ-U2R" firstAttribute="top" secondItem="qEO-Vr-RhS" secondAttribute="bottom" constant="11" id="KpH-Tt-Xcm"/>
-                            <constraint firstItem="nzg-VJ-U2R" firstAttribute="top" secondItem="uXe-7r-6z5" secondAttribute="bottom" id="NF9-4Z-zfZ"/>
-                            <constraint firstItem="I8H-Wh-LrN" firstAttribute="top" secondItem="KnB-v2-TXB" secondAttribute="bottom" constant="30" id="OJe-q4-enR"/>
-                            <constraint firstItem="uXe-7r-6z5" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="eod-Rr-rIe"/>
-                            <constraint firstItem="KnB-v2-TXB" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="vUa-zG-QNa"/>
-                            <constraint firstItem="I8H-Wh-LrN" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="xCs-0S-9Sb"/>
+                            <constraint firstItem="I8H-Wh-LrN" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="3Jg-Y4-pLY"/>
+                            <constraint firstItem="uXe-7r-6z5" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="3uA-Y9-gOQ"/>
+                            <constraint firstItem="nzg-VJ-U2R" firstAttribute="top" secondItem="qEO-Vr-RhS" secondAttribute="bottom" constant="11" id="GOK-dh-1KH"/>
+                            <constraint firstItem="KnB-v2-TXB" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="Jt3-I8-R3k"/>
+                            <constraint firstItem="KnB-v2-TXB" firstAttribute="top" secondItem="5aN-66-KpU" secondAttribute="bottom" constant="30" id="KWx-df-f4r"/>
+                            <constraint firstItem="zIq-lk-Wac" firstAttribute="top" secondItem="Bpq-BN-e3s" secondAttribute="bottom" constant="20" id="LZa-7v-dEs"/>
+                            <constraint firstItem="nzg-VJ-U2R" firstAttribute="top" secondItem="uXe-7r-6z5" secondAttribute="bottom" id="MiY-EL-xAO"/>
+                            <constraint firstItem="Efe-SR-urA" firstAttribute="top" secondItem="I8H-Wh-LrN" secondAttribute="bottom" constant="8" id="NPD-Pv-cRx"/>
+                            <constraint firstItem="Efe-SR-urA" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="Zke-9m-ZyK"/>
+                            <constraint firstItem="zIq-lk-Wac" firstAttribute="trailing" secondItem="cow-KX-Su4" secondAttribute="trailingMargin" id="aVG-PD-NcY"/>
+                            <constraint firstItem="qEO-Vr-RhS" firstAttribute="leading" secondItem="uXe-7r-6z5" secondAttribute="trailing" constant="8" id="bK5-6I-YE1"/>
+                            <constraint firstItem="I8H-Wh-LrN" firstAttribute="top" secondItem="KnB-v2-TXB" secondAttribute="bottom" constant="30" id="cIK-bu-1MG"/>
+                            <constraint firstItem="KnB-v2-TXB" firstAttribute="centerY" secondItem="cow-KX-Su4" secondAttribute="centerY" id="knB-Gf-snc"/>
+                            <constraint firstItem="QuF-DS-ZQ2" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="m7o-w4-9Gi"/>
+                            <constraint firstItem="5aN-66-KpU" firstAttribute="centerX" secondItem="cow-KX-Su4" secondAttribute="centerX" id="vfr-91-mSA"/>
+                            <constraint firstItem="QuF-DS-ZQ2" firstAttribute="centerY" secondItem="cow-KX-Su4" secondAttribute="centerY" id="y4X-Zs-uEL"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="95A-3H-ghQ"/>
-                                <exclude reference="Jdu-Sf-Pxv"/>
-                            </mask>
-                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="5TH-aT-HiA" appends="YES" id="zyi-yZ-4mX"/>
                             <outletCollection property="gestureRecognizers" destination="WDN-OB-o4b" appends="YES" id="0zU-hI-o08"/>
