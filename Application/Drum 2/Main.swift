@@ -14,11 +14,7 @@ import AudioToolbox
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    // MARK: Globals
-    
     var window: UIWindow?
-    
-    // MARK: Methods
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         return true
@@ -27,57 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 class Main: UIViewController {
     
+    @IBOutlet weak var progress: UIView!
+    var circle: KYCircularProgress!
+    
+    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var button: UILabel!
+    var startToggle = false
+    
+    @IBOutlet var lastColor: UILabel!
+    //@IBOutlet var marker: UILabel!
     @IBOutlet var pageControl: UIPageControl!
     var page = 5
     
-    // MARK: Config
-    
-    var refreshRate = 0.005
-    var doneHold    = 200
-    
-    // MARK: Outlets
-    
-    @IBOutlet weak var progress: UIView!
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var button: UILabel!
-    
-    // MARK: Globals
-    
-    var circle: KYCircularProgress!
-    var startToggle = false
-    var hold = 0
-    
-    var modifier = 0
-    
-    // MARK: Methods
-    
-    
-    @IBAction func left() {
-        
-        if !startToggle {
-            if page != 10 {
-                page++
-            }
-            pageControl.currentPage = page
-        }
-    }
-    
-    @IBAction func right() {
-        
-        if !startToggle {
-            if page != 0 {
-                page--
-            }
-            pageControl.currentPage = page
-        }
-    }
-    
-    
     override func viewDidLoad() {
         
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        lastColor.hidden = true
         
-        changeColor(false)
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         circle = KYCircularProgress(frame: CGRectMake(0, 0, 170, 170))
         circle.path = UIBezierPath(arcCenter: CGPoint(x: 85, y: 85), radius: CGFloat(80), startAngle: CGFloat(3 * M_PI/2), endAngle: CGFloat(11), clockwise: true)
@@ -88,210 +51,154 @@ class Main: UIViewController {
         
         progress.addSubview(circle)
         
-        NSTimer.scheduledTimerWithTimeInterval(refreshRate, target: self, selector: "update", userInfo: nil, repeats: true)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        
-        // Initially show help view
-        let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
-        if !launchedBefore  {
-            help()
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "launchedBefore")
-        }
+        NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: "update", userInfo: nil, repeats: true)
     }
     
     func update() {
-        var seconds = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second
         
-        print("Real Seconds: \(seconds)")
+        let seconds = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second
         
+        print("Real: \(seconds)")
         
-        // Change background color
-        //changeColor(true)
-        
-        var progress = UInt8(Float(seconds % 10))
-        
-        // Update interface measures
-        
-        
-        
-        
+        var modifier = 0
         
         if page == 0 {
-            progress = 50 + progress
-            label.text = "-\(progress)s"
-            seconds = seconds + 10
-            
+            modifier = 50
         } else if page == 1 {
-            progress = 40 + progress
-            label.text = "-\(progress)s"
-            seconds = seconds + 20
-            
+            modifier = 40
         } else if page == 2 {
-            progress = 30 + progress
-            label.text = "-\(progress)s"
-            seconds = seconds + 30
-            
+            modifier = 30
         } else if page == 3 {
-            progress = 20 + progress
-            label.text = "-\(progress)s"
-            seconds = seconds + 40
-            
+            modifier = 20
         } else if page == 4 {
-            progress = 10 + progress
-            label.text = "-\(progress)s"
-            seconds = seconds + 50
-            
+            modifier = 10
         } else if page == 5 {
-            progress = 0 + progress
-            label.text = "\(10 - progress)s"
-            seconds = seconds + 0
-            
-        } else if page == 6 {
-            progress = 10 + progress
-            label.text = "\(30 - progress)s"
-            seconds = seconds + 10
-            
-        } else if page == 7 {
-            progress = 20 + progress
-            label.text = "\(50 - progress)s"
-            seconds = seconds + 20
-            
-        } else if page == 8 {
-            progress = 30 + progress
-            label.text = "\(70 - progress)s"
-            seconds = seconds + 30
-            
-        } else if page == 9 {
-            progress = 40 + progress
-            label.text = "\(90 - progress)s"
-            seconds = seconds + 40
-            
-        } else if page == 10 {
-            progress = 50 + progress
-            label.text = "\(110 - progress)s"
-            seconds = seconds + 50
-            
+            modifier = 0
         }
         
-        var color = UIColor()
-        
-        if seconds >= 0 && seconds < 10 { // 0 to 9
-            color = UIColor(red:1, green:0.4, blue:0.4, alpha:1)
-        } else if seconds >= 10 && seconds < 20 { // 10 to 19
-            color = UIColor(red:1, green:0.8, blue:0.43, alpha:1)
-        } else if seconds >= 20 && seconds < 30 { // 20 to 29
-            color = UIColor(red:0.78, green:0.77, blue:0.35, alpha:1)
-        } else if seconds >= 30 && seconds < 40 { // 30 to 39
-            color = UIColor(red:0.24, green:0.79, blue:0.42, alpha:1)
-        } else if seconds >= 40 && seconds < 50 { // 40 to 49
-            color = UIColor(red:0.09, green:0.51, blue:0.98, alpha:1)
-        } else if seconds >= 50 && seconds < 60 { // 50 to 59
-            color = UIColor(red:0.8, green:0.42, blue:0.99, alpha:1)
-        } else {
-            color = UIColor.blackColor()
-        }
-        
-        view.backgroundColor = color
-        
-        
-        
-        
-        
+        let progress = seconds % 10
+        //label.text = "\(((modifier * 2) + 10) - (progress + modifier))s"
+        label.text = "\(10 - progress)s"
         circle.progress = Double(progress) / 10
         
-        // Shows Done message after syncing
-        if hold > 0 {
-            hold--
-            button.text = "Done!"
-        } else {
-            if !startToggle {
-                button.text = "Tap to Sync"
-            } else {
-                button.text = "Cancel"
-            }
-        }
+        let newSeconds = seconds - modifier
         
-        // Fire if appropriate
+        print(" Mod: \(modifier)")
+        print(" New: \(newSeconds)")
+        
+        // Color Selection //////////////////////////////////////////////////
+        var color = UIColor()
+        // Red
+        if (newSeconds >= 0 && newSeconds < 10) || (newSeconds >= -60 && newSeconds < -50) {
+            color = UIColor(red:1, green:0.4, blue:0.4, alpha:1)
+        }
+        // Orange
+        else if (newSeconds >= 10 && newSeconds < 20) || (newSeconds >= -50 && newSeconds < -40) {
+            color = UIColor(red:1, green:0.8, blue:0.43, alpha:1)
+        }
+        // Yellow
+        else if (newSeconds >= 20 && newSeconds < 30) || (newSeconds >= -40 && newSeconds < -30) {
+            color = UIColor(red:0.78, green:0.77, blue:0.35, alpha:1)
+        }
+        // Green
+        else if (newSeconds >= 30 && newSeconds < 40) || (newSeconds >= -30 && newSeconds < -20) {
+            color = UIColor(red:0.24, green:0.79, blue:0.42, alpha:1)
+        }
+        // Blue
+        else if (newSeconds >= 40 && newSeconds < 50) || (newSeconds >= -20 && newSeconds < -10) {
+            color = UIColor(red:0.09, green:0.51, blue:0.98, alpha:1)
+        }
+        // Purple
+        else if (newSeconds >= 50 && newSeconds < 60) || (newSeconds >= -10 && newSeconds < 0) {
+            color = UIColor(red:0.8, green:0.42, blue:0.99, alpha:1)
+        }
+        else {
+            color = UIColor.blackColor()
+        }
+        view.backgroundColor = color
+        // Color Selection //////////////////////////////////////////////////
+
+        
+        
+        
+        
+        
+        
+        
         if seconds % 10 == 0 && startToggle  {
             print("Synced")
             
-            startToggle = false
-            hold = hold + doneHold
+            start()
             
             let player = MPMusicPlayerController.systemMusicPlayer()
-            
-            player.skipToBeginning()
+            //player.skipToBeginning()
+            player.currentPlaybackTime = NSTimeInterval(modifier)
             player.play()
-        }
-    }
-    
-    func changeColor(animated: Bool) {
-        
-        let seconds = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second
-        
-        var color = UIColor()
-        
-        if seconds >= 0 && seconds < 10 { // 0 to 9
-            color = UIColor(red:1, green:0.4, blue:0.4, alpha:1)
-        } else if seconds >= 10 && seconds < 20 { // 10 to 19
-            color = UIColor(red:1, green:0.8, blue:0.43, alpha:1)
-        } else if seconds >= 20 && seconds < 30 { // 20 to 29
-            color = UIColor(red:0.78, green:0.77, blue:0.35, alpha:1)
-        } else if seconds >= 30 && seconds < 40 { // 30 to 39
-            color = UIColor(red:0.24, green:0.79, blue:0.42, alpha:1)
-        } else if seconds >= 40 && seconds < 50 { // 40 to 49
-            color = UIColor(red:0.09, green:0.51, blue:0.98, alpha:1)
-        } else if seconds >= 50 && seconds < 60 { // 50 to 59
-            color = UIColor(red:0.8, green:0.42, blue:0.99, alpha:1)
-        }
-        
-        if animated {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                NSOperationQueue.mainQueue().addOperationWithBlock {
-                    UIView.animateWithDuration(0.75, animations: {
-                        self.view.backgroundColor = color
-                    })
-                }
+            
+            lastColor.hidden = false
+            
+            // Red
+            if (newSeconds >= 0 && newSeconds < 10) || (newSeconds >= -60 && newSeconds < -50) {
+                lastColor.text = "▷ Purple"
             }
-        } else {
-            view.backgroundColor = color
+                // Orange
+            else if (newSeconds >= 10 && newSeconds < 20) || (newSeconds >= -50 && newSeconds < -40) {
+                lastColor.text = "▷ Red"
+            }
+                // Yellow
+            else if (newSeconds >= 20 && newSeconds < 30) || (newSeconds >= -40 && newSeconds < -30) {
+                lastColor.text = "▷ Orange"
+            }
+                // Green
+            else if (newSeconds >= 30 && newSeconds < 40) || (newSeconds >= -30 && newSeconds < -20) {
+                lastColor.text = "▷ Yellow"
+            }
+                // Blue
+            else if (newSeconds >= 40 && newSeconds < 50) || (newSeconds >= -20 && newSeconds < -10) {
+                lastColor.text = "▷ Green"
+            }
+                // Purple
+            else if (newSeconds >= 50 && newSeconds < 60) || (newSeconds >= -10 && newSeconds < 0) {
+                lastColor.text = "▷ Blue"
+            }
+            else {
+                lastColor.text = "▷ Black"
+            }
         }
     }
     
-    func change() {
+    @IBAction func start() {
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        
         if startToggle {
             startToggle = false
             button.text = "Tap to Sync"
-            pageControl.hidden = false
+            //pageControl.hidden = false
+            //marker.hidden = false
         } else {
             startToggle = true
             button.text = "Cancel"
-            pageControl.hidden = true
+            //pageControl.hidden = true
+            //marker.hidden = true
         }
     }
     
-    // MARK: Actions
-    
-    @IBAction func start() {
-        
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        
-        let seconds = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second
-        
-        // Make up for overlap
-        if seconds % 10 == 0  {
-            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "change", userInfo: nil, repeats: false)
-        } else {
-            change()
+    @IBAction func left() {
+        if !startToggle {
+            if page != 10 {
+                page++
+            }
+            pageControl.currentPage = page
         }
     }
     
-    @IBAction func help() {
-        let alert: UIAlertController = UIAlertController(title: "Help", message: "1. Open the Music app and play the same song on each device.\n\n2. Reopen Strum and tap “Tap to Sync.” Each device must tap anytime within the same color window.\n\n3. Wait for the 10-second countdown to expire and enjoy your multi-device music!", preferredStyle: .Alert)
-        //alert.view.tintColor = UIColor(red:1, green:0.4, blue:0.4, alpha:1)
-        alert.addAction(UIAlertAction(title: "Okay", style: .Cancel) { action -> Void in })
-        presentViewController(alert, animated: true, completion: nil)
+    @IBAction func right() {
+        if !startToggle {
+            if page != 0 {
+                page--
+            }
+            pageControl.currentPage = page
+        }
     }
 }
