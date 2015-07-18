@@ -116,22 +116,17 @@ class Main: UIViewController {
         }
         view.backgroundColor = color
         // Color Selection //////////////////////////////////////////////////
-
-        
-        
-        
-        
-        
-        
         
         if seconds % 10 == 0 && startToggle  {
             print("Synced")
             
-            start()
+            startToggle = false
+            button.text = "Tap to Sync"
             
             let player = MPMusicPlayerController.systemMusicPlayer()
-            //player.skipToBeginning()
+            player.pause()
             player.currentPlaybackTime = NSTimeInterval(modifier)
+            player.prepareToPlay()
             player.play()
             
             lastColor.hidden = false
@@ -167,19 +162,18 @@ class Main: UIViewController {
     }
     
     @IBAction func start() {
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
+        let seconds = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: NSDate()).second
         
-        if startToggle {
-            startToggle = false
-            button.text = "Tap to Sync"
-            //pageControl.hidden = false
-            //marker.hidden = false
-        } else {
-            startToggle = true
-            button.text = "Cancel"
-            //pageControl.hidden = true
-            //marker.hidden = true
+        if seconds % 10 != 0 {
+            if startToggle {
+                startToggle = false
+                button.text = "Tap to Sync"
+            } else {
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                startToggle = true
+                button.text = "Cancel"
+            }
         }
     }
     
