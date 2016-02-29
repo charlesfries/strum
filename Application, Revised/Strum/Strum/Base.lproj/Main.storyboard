@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Main" customModule="Strum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Strum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg4-gW-zO3">
+                                <rect key="frame" x="241" y="127" width="119" height="58"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTz-9s-IlS">
+                                <rect key="frame" x="215" y="215" width="170" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkS-fI-Ia9">
+                                        <rect key="frame" x="51" y="56" width="68" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xkS-fI-Ia9" firstAttribute="centerY" secondItem="lTz-9s-IlS" secondAttribute="centerY" id="MZS-eJ-4nh"/>
+                                    <constraint firstItem="xkS-fI-Ia9" firstAttribute="centerX" secondItem="lTz-9s-IlS" secondAttribute="centerX" id="o5p-kr-ghf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tap to Sync" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMp-O1-RSK">
+                                <rect key="frame" x="188" y="415" width="225" height="58"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97I-Nb-V7x">
+                                <rect key="frame" x="267" y="481" width="67" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j15-xR-OpG">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                            </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rl-C8-krT">
+                                <rect key="frame" x="558" y="40" width="22" height="22"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="Ch1-ih-Ci2" kind="show" id="UWk-jX-MDh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="97I-Nb-V7x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5fW-Ag-tC8"/>
+                            <constraint firstItem="j15-xR-OpG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8HP-Ql-3Gq"/>
+                            <constraint firstItem="oMp-O1-RSK" firstAttribute="top" secondItem="lTz-9s-IlS" secondAttribute="bottom" constant="30" id="Hgn-FL-ONs"/>
+                            <constraint firstItem="Gg4-gW-zO3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NAx-XJ-qrC"/>
+                            <constraint firstItem="7Rl-C8-krT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QrY-oW-DSD"/>
+                            <constraint firstItem="lTz-9s-IlS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RgS-Mu-46W"/>
+                            <constraint firstItem="oMp-O1-RSK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X3F-M9-fid"/>
+                            <constraint firstItem="lTz-9s-IlS" firstAttribute="top" secondItem="Gg4-gW-zO3" secondAttribute="bottom" constant="30" id="hLx-eq-Fui"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j15-xR-OpG" secondAttribute="bottom" id="klJ-UM-TaR"/>
+                            <constraint firstItem="7Rl-C8-krT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lzn-iX-p8i"/>
+                            <constraint firstItem="97I-Nb-V7x" firstAttribute="top" secondItem="oMp-O1-RSK" secondAttribute="bottom" constant="8" id="mgr-cr-eq6"/>
+                            <constraint firstItem="lTz-9s-IlS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qXB-2M-e9d"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="25D-5O-EAL" appends="YES" id="rGZ-kz-p92"/>
+                            <outletCollection property="gestureRecognizers" destination="YXv-Tr-R0C" appends="YES" id="kSZ-PS-Z0q"/>
+                            <outletCollection property="gestureRecognizers" destination="Ktw-zi-8ZX" appends="YES" id="XXA-6Z-ZS4"/>
+                        </connections>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="clock" destination="xkS-fI-Ia9" id="FMr-JU-Pdv"/>
+                        <outlet property="lastColor" destination="97I-Nb-V7x" id="icq-r5-nWn"/>
+                        <outlet property="progress" destination="lTz-9s-IlS" id="UCb-6b-kc5"/>
+                        <outlet property="status" destination="oMp-O1-RSK" id="Hk0-zz-LeF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="25D-5O-EAL">
+                    <connections>
+                        <action selector="fire" destination="BYZ-38-t0r" id="msi-PH-KRb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="YXv-Tr-R0C">
+                    <connections>
+                        <action selector="left" destination="BYZ-38-t0r" id="WLa-8g-Spi"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Ktw-zi-8ZX">
+                    <connections>
+                        <action selector="right" destination="BYZ-38-t0r" id="OWf-sU-THh"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="43" y="458"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="Fcp-fR-Seg">
+            <objects>
+                <tableViewController id="pUI-XY-7SK" customClass="Info" customModule="Strum" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ZmD-Gg-rax">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Help" id="wHf-EC-6ht">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6Hc-jV-dLm" style="IBUITableViewCellStyleDefault" id="vCH-C4-UQg">
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vCH-C4-UQg" id="V1d-jP-bqm">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="How to Strum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Hc-jV-dLm">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="oDz-th-DEc" style="IBUITableViewCellStyleDefault" id="rAx-KD-kO6">
+                                        <rect key="frame" x="0.0" y="158" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rAx-KD-kO6" id="Rch-fx-ysc">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oDz-th-DEc">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="M6T-yI-KYY" style="IBUITableViewCellStyleDefault" id="tQy-aj-lof">
+                                        <rect key="frame" x="0.0" y="202" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tQy-aj-lof" id="HsR-Ts-vyw">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M6T-yI-KYY">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="About" id="rt2-Ky-xqE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vZC-E4-Jfj" style="IBUITableViewCellStyleDefault" id="5JY-Ps-rlK">
+                                        <rect key="frame" x="0.0" y="289" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5JY-Ps-rlK" id="XDc-98-vOH">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About Strum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vZC-E4-Jfj">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fLy-Vb-gdo" style="IBUITableViewCellStyleDefault" id="LQP-Ke-9A7">
+                                        <rect key="frame" x="0.0" y="333" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LQP-Ke-9A7" id="C4i-1e-zZn">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About Figure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fLy-Vb-gdo">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="OZe-Ou-SHA" style="IBUITableViewCellStyleDefault" id="WoX-je-Fba">
+                                        <rect key="frame" x="0.0" y="377" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WoX-je-Fba" id="an2-N6-l5v">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Legal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OZe-Ou-SHA">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="QRP-Cq-GYA" kind="show" id="hVJ-aZ-DgR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pUI-XY-7SK" id="N3p-DY-0z4"/>
+                            <outlet property="delegate" destination="pUI-XY-7SK" id="wP1-kq-a3w"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Info" id="plv-Pe-RAr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="KRa-eM-g8D">
+                            <connections>
+                                <action selector="done" destination="pUI-XY-7SK" id="8pw-Bg-VCx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edz-9t-1Ex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="458"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AHa-0B-wjv">
+            <objects>
+                <viewController id="QRP-Cq-GYA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1cA-Cy-MYi"/>
+                        <viewControllerLayoutGuide type="bottom" id="GvF-Xd-gVJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qne-xc-Ibg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HP-HD-SX3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <string key="text">Strum 1.0
+Copyright (c) 2015 Figure Inc.
+
+*** END USER LICENSE AGREEMENT ***
+
+IMPORTANT: PLEASE READ THIS LICENSE CAREFULLY BEFORE USING THIS SOFTWARE.
+
+1. LICENSE
+
+By receiving, opening the file package, and/or using Strum 1.0("Software") containing this software, you agree that this End User User License Agreement(EULA) is a legally binding and valid contract and agree to be bound by it. You agree to abide by the intellectual property laws and all of the terms and conditions of this Agreement.
+
+Unless you have a different license agreement signed by Figure Inc. your use of Strum 1.0 indicates your acceptance of this license agreement and warranty.
+
+Subject to the terms of this Agreement, Figure Inc. grants to you a limited, non-exclusive, non-transferable license, without right to sub-license, to use Strum 1.0 in accordance with this Agreement and any other written agreement with Figure Inc.. Figure Inc. does not transfer the title of Strum 1.0 to you; the license granted to you is not a sale. This agreement is a binding legal agreement between Figure Inc. and the purchasers or users of Strum 1.0.
+
+If you do not agree to be bound by this agreement, remove Strum 1.0 from your computer now and, if applicable, promptly return to Figure Inc. by mail any copies of Strum 1.0 and related documentation and packaging in your possession.
+
+2. DISTRIBUTION
+
+Strum 1.0 and the license herein granted shall not be copied, shared, distributed, re-sold, offered for re-sale, transferred or sub-licensed in whole or in part except that you may make one copy for archive purposes only. For information about redistribution of Strum 1.0 contact Figure Inc..
+
+3. USER AGREEMENT
+
+3.1 Use
+
+Your license to use Strum 1.0 is limited to the number of licenses purchased by you. You shall not allow others to use, copy or evaluate copies of Strum 1.0.
+
+3.2 Use Restrictions
+
+You shall use Strum 1.0 in compliance with all applicable laws and not for any unlawful purpose. Without limiting the foregoing, use, display or distribution of Strum 1.0 together with material that is pornographic, racist, vulgar, obscene, defamatory, libelous, abusive, promoting hatred, discriminating or displaying prejudice based on religion, ethnic heritage, race, sexual orientation or age is strictly prohibited.
+
+Each licensed copy of Strum 1.0 may be used on one single computer location by one user. Use of Strum 1.0 means that you have loaded, installed, or run Strum 1.0 on a computer or similar device. If you install Strum 1.0 onto a multi-user platform, server or network, each and every individual user of Strum 1.0 must be licensed separately.
+
+You may make one copy of Strum 1.0 for backup purposes, providing you only have one copy installed on one computer being used by one person. Other users may not use your copy of Strum 1.0 . The assignment, sublicense, networking, sale, or distribution of copies of Strum 1.0 are strictly forbidden without the prior written consent of Figure Inc.. It is a violation of this agreement to assign, sell, share, loan, rent, lease, borrow, network or transfer the use of Strum 1.0. If any person other than yourself uses Strum 1.0 registered in your name, regardless of whether it is at the same time or different times, then this agreement is being violated and you are responsible for that violation!
+
+3.3 Copyright Restriction
+
+This Software contains copyrighted material, trade secrets and other proprietary material. You shall not, and shall not attempt to, modify, reverse engineer, disassemble or decompile Strum 1.0. Nor can you create any derivative works or other works that are based upon or derived from Strum 1.0 in whole or in part.
+
+Figure Inc.'s name, logo and graphics file that represents Strum 1.0 shall not be used in any way to promote products developed with Strum 1.0 . Figure Inc. retains sole and exclusive ownership of all right, title and interest in and to Strum 1.0 and all Intellectual Property rights relating thereto.
+
+Copyright law and international copyright treaty provisions protect all parts of Strum 1.0, products and services. No program, code, part, image, audio sample, or text may be copied or used in any way by the user except as intended within the bounds of the single user program. All rights not expressly granted hereunder are reserved for Figure Inc..
+
+3.4 Limitation of Responsibility
+
+You will indemnify, hold harmless, and defend Figure Inc. , its employees, agents and distributors against any and all claims, proceedings, demand and costs resulting from or in any way connected with your use of Figure Inc.'s Software.
+
+In no event (including, without limitation, in the event of negligence) will Figure Inc. , its employees, agents or distributors be liable for any consequential, incidental, indirect, special or punitive damages whatsoever (including, without limitation, damages for loss of profits, loss of use, business interruption, loss of information or data, or pecuniary loss), in connection with or arising out of or related to this Agreement, Strum 1.0 or the use or inability to use Strum 1.0 or the furnishing, performance or use of any other matters hereunder whether based upon contract, tort or any other theory including negligence.
+
+Figure Inc.'s entire liability, without exception, is limited to the customers' reimbursement of the purchase price of the Software (maximum being the lesser of the amount paid by you and the suggested retail price as listed by Figure Inc. ) in exchange for the return of the product, all copies, registration papers and manuals, and all materials that constitute a transfer of license from the customer back to Figure Inc..
+
+3.5 Warranties
+
+Except as expressly stated in writing, Figure Inc. makes no representation or warranties in respect of this Software and expressly excludes all other warranties, expressed or implied, oral or written, including, without limitation, any implied warranties of merchantable quality or fitness for a particular purpose.
+
+3.6 Governing Law
+
+This Agreement shall be governed by the law of the United States applicable therein. You hereby irrevocably attorn and submit to the non-exclusive jurisdiction of the courts of United States therefrom. If any provision shall be considered unlawful, void or otherwise unenforceable, then that provision shall be deemed severable from this License and not affect the validity and enforceability of any other provisions.
+
+3.7 Termination
+
+Any failure to comply with the terms and conditions of this Agreement will result in automatic and immediate termination of this license. Upon termination of this license granted herein for any reason, you agree to immediately cease use of Strum 1.0 and destroy all copies of Strum 1.0 supplied under this Agreement. The financial obligations incurred by you shall survive the expiration or termination of this license.
+
+4. DISCLAIMER OF WARRANTY
+
+THIS SOFTWARE AND THE ACCOMPANYING FILES ARE SOLD "AS IS" AND WITHOUT WARRANTIES AS TO PERFORMANCE OR MERCHANTABILITY OR ANY OTHER WARRANTIES WHETHER EXPRESSED OR IMPLIED. THIS DISCLAIMER CONCERNS ALL FILES GENERATED AND EDITED BY Strum 1.0 AS WELL.
+
+5. CONSENT OF USE OF DATA
+
+You agree that Figure Inc. may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to Strum 1.0.Figure Inc. may also use this information to provide notices to you which may be of use or interest to you.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4HP-HD-SX3" firstAttribute="leading" secondItem="Qne-xc-Ibg" secondAttribute="leadingMargin" constant="-20" id="bzY-pL-3Ez"/>
+                            <constraint firstItem="GvF-Xd-gVJ" firstAttribute="top" secondItem="4HP-HD-SX3" secondAttribute="bottom" id="idZ-DO-bPY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4HP-HD-SX3" secondAttribute="trailing" constant="-20" id="mIt-zn-mUN"/>
+                            <constraint firstItem="4HP-HD-SX3" firstAttribute="top" secondItem="Qne-xc-Ibg" secondAttribute="topMargin" id="pjh-bP-TcP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-a1-Mba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2175" y="458"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="edH-UZ-HPY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ch1-ih-Ci2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ICV-Ve-sUg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pUI-XY-7SK" kind="relationship" relationship="rootViewController" id="fas-Ik-DGc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSz-Xh-GON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="458"/>
+        </scene>
+    </scenes>
+</document>
