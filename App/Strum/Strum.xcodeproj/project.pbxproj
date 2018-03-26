@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7748CA061B5C811E004B3043 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7748CA051B5C811E004B3043 /* iAd.framework */; };
+		770AEDAC1DFC265400D2749A /* 9c4edce0c07bf00ae5fa3fc08272fc04.1000x1000x1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 770AEDAB1DFC265400D2749A /* 9c4edce0c07bf00ae5fa3fc08272fc04.1000x1000x1.jpg */; };
+		771C5E001DFD3F7E00C2A02B /* MainAlt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771C5DFF1DFD3F7E00C2A02B /* MainAlt.swift */; };
 		7774B6B21B5AA09800AEB0A4 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7774B6B11B5AA09800AEB0A4 /* Main.swift */; };
 		7774B6B51B5AA09800AEB0A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7774B6B31B5AA09800AEB0A4 /* Main.storyboard */; };
 		7774B6B71B5AA09800AEB0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7774B6B61B5AA09800AEB0A4 /* Assets.xcassets */; };
 		7774B6BA1B5AA09800AEB0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7774B6B81B5AA09800AEB0A4 /* LaunchScreen.storyboard */; };
 		7774B6C21B5AA96B00AEB0A4 /* KYCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7774B6C11B5AA96B00AEB0A4 /* KYCircularProgress.swift */; };
+		77B7FC031DF9113900A46E09 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7FC021DF9113900A46E09 /* Info.swift */; };
+		77B7FC051DF9116500A46E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7FC041DF9116500A46E09 /* AppDelegate.swift */; };
 		77F3FD9D1B5C8AF500F22CCF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F3FD9C1B5C8AF500F22CCF /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7748CA051B5C811E004B3043 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		770AEDAB1DFC265400D2749A /* 9c4edce0c07bf00ae5fa3fc08272fc04.1000x1000x1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9c4edce0c07bf00ae5fa3fc08272fc04.1000x1000x1.jpg; sourceTree = "<group>"; };
+		771C5DFF1DFD3F7E00C2A02B /* MainAlt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlt.swift; sourceTree = "<group>"; };
 		7774B6AC1B5AA09800AEB0A4 /* Strum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7774B6B11B5AA09800AEB0A4 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		7774B6B41B5AA09800AEB0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -25,6 +29,8 @@
 		7774B6B91B5AA09800AEB0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7774B6BB1B5AA09800AEB0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7774B6C11B5AA96B00AEB0A4 /* KYCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCircularProgress.swift; sourceTree = "<group>"; };
+		77B7FC021DF9113900A46E09 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		77B7FC041DF9116500A46E09 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F3FD9C1B5C8AF500F22CCF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,7 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7748CA061B5C811E004B3043 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,14 +64,17 @@
 		7774B6AE1B5AA09800AEB0A4 /* Strum */ = {
 			isa = PBXGroup;
 			children = (
+				77B7FC041DF9116500A46E09 /* AppDelegate.swift */,
 				7774B6B11B5AA09800AEB0A4 /* Main.swift */,
-				7774B6B31B5AA09800AEB0A4 /* Main.storyboard */,
-				7774B6B61B5AA09800AEB0A4 /* Assets.xcassets */,
-				7774B6B81B5AA09800AEB0A4 /* LaunchScreen.storyboard */,
-				7774B6BB1B5AA09800AEB0A4 /* Info.plist */,
+				771C5DFF1DFD3F7E00C2A02B /* MainAlt.swift */,
+				77B7FC021DF9113900A46E09 /* Info.swift */,
 				7774B6C11B5AA96B00AEB0A4 /* KYCircularProgress.swift */,
+				7774B6B31B5AA09800AEB0A4 /* Main.storyboard */,
+				7774B6B81B5AA09800AEB0A4 /* LaunchScreen.storyboard */,
+				7774B6B61B5AA09800AEB0A4 /* Assets.xcassets */,
+				7774B6BB1B5AA09800AEB0A4 /* Info.plist */,
 				77F3FD9C1B5C8AF500F22CCF /* Icon.png */,
-				7748CA051B5C811E004B3043 /* iAd.framework */,
+				770AEDAB1DFC265400D2749A /* 9c4edce0c07bf00ae5fa3fc08272fc04.1000x1000x1.jpg */,
 			);
 			path = Strum;
 			sourceTree = "<group>";
@@ -97,12 +105,13 @@
 		7774B6A41B5AA09800AEB0A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Figure Inc.";
 				TargetAttributes = {
 					7774B6AB1B5AA09800AEB0A4 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 48386QZ38R;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -130,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7774B6BA1B5AA09800AEB0A4 /* LaunchScreen.storyboard in Resources */,
+				770AEDAC1DFC265400D2749A /* 9c4edce0c07bf00ae5fa3fc08272fc04.1000x1000x1.jpg in Resources */,
 				7774B6B71B5AA09800AEB0A4 /* Assets.xcassets in Resources */,
 				77F3FD9D1B5C8AF500F22CCF /* Icon.png in Resources */,
 				7774B6B51B5AA09800AEB0A4 /* Main.storyboard in Resources */,
@@ -143,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B7FC051DF9116500A46E09 /* AppDelegate.swift in Sources */,
 				7774B6B21B5AA09800AEB0A4 /* Main.swift in Sources */,
+				77B7FC031DF9113900A46E09 /* Info.swift in Sources */,
 				7774B6C21B5AA96B00AEB0A4 /* KYCircularProgress.swift in Sources */,
+				771C5E001DFD3F7E00C2A02B /* MainAlt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,8 +196,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -227,8 +242,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -247,6 +264,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -263,6 +281,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usefigure.Strum-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -279,6 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usefigure.Strum-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
