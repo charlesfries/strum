@@ -135,7 +135,7 @@
 					7774B6AB1B5AA09800AEB0A4 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 48386QZ38R;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -321,7 +321,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.charlesfri.Strum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -338,7 +339,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.charlesfri.Strum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

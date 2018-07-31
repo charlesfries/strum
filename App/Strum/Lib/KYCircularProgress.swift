@@ -257,7 +257,7 @@ class KYCircularShapeView: UIView {
         super.layoutSubviews()
         
         if startAngle == endAngle {
-            endAngle = startAngle + (M_PI * 2)
+            endAngle = startAngle + (Double.pi * 2)
         }
         shapeLayer().path = shapeLayer().path ?? layoutPath().cgPath
     }

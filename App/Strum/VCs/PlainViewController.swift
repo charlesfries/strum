@@ -69,7 +69,7 @@ class PlainViewController: UIViewController, MPMediaPickerControllerDelegate
     
     func playAudio()
     {
-        let player = MPMusicPlayerController.systemMusicPlayer()
+        let player = MPMusicPlayerController.systemMusicPlayer
         player.pause()
         player.skipToBeginning()
         player.play()

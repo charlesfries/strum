@@ -36,7 +36,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate
     {
         circle = KYCircularProgress(frame: CGRect(x: 0, y: 0, width: 170, height: 170))
         
-        circle.path = UIBezierPath(arcCenter: CGPoint(x: 85, y: 85), radius: CGFloat(80), startAngle: CGFloat(3 * M_PI/2), endAngle: CGFloat(11), clockwise: true)
+        circle.path = UIBezierPath(arcCenter: CGPoint(x: 85, y: 85), radius: CGFloat(80), startAngle: CGFloat(3 * Double.pi/2), endAngle: CGFloat(11), clockwise: true)
         circle.colors = [UIColor.white, UIColor.white, UIColor.white, UIColor.white]
         circle.lineWidth = 10
         circle.showProgressGuide = true
@@ -91,7 +91,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate
     
     func playAudio()
     {
-        let player = MPMusicPlayerController.systemMusicPlayer()
+        let player = MPMusicPlayerController.systemMusicPlayer
         player.pause()
         player.skipToBeginning()
         player.play()

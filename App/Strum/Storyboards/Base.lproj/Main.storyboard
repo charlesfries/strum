@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,6 +71,7 @@
                         <outlet property="clock" destination="xkS-fI-Ia9" id="FMr-JU-Pdv"/>
                         <outlet property="progress" destination="lTz-9s-IlS" id="UCb-6b-kc5"/>
                         <outlet property="status" destination="oMp-O1-RSK" id="Hk0-zz-LeF"/>
+                        <segue destination="OBu-aV-lmM" kind="show" identifier="toPlain" id="68C-5s-ONW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,41 +124,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="09g-kb-SAf">
-                                <rect key="frame" x="0.0" y="389" width="375" height="278"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="51W-af-IUk" detailTextLabel="w23-0G-sbG" imageView="RP1-ug-wcu" style="IBUITableViewCellStyleSubtitle" id="Wmm-C0-NWL">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wmm-C0-NWL" id="lpJ-uz-ig0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Yamborghini High (feat. Juicy J)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="51W-af-IUk">
-                                                    <rect key="frame" x="74" y="5" width="244" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="A$AP Mob" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w23-0G-sbG">
-                                                    <rect key="frame" x="74" y="25.5" width="60" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Cover.jpg" id="RP1-ug-wcu">
-                                                    <rect key="frame" x="15" y="0.0" width="44" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -167,7 +132,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Strum" id="i2a-fJ-2hz">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="7hx-Aq-4Og">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="7hx-Aq-4Og">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="muv-VG-psz">
                                 <rect key="frame" x="337" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -339,10 +304,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HP-HD-SX3">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <string key="text">Strum 1.0
-Copyright (c) 2015 Figure Inc.
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HP-HD-SX3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <mutableString key="text">Strum 1.0
+Copyright (c) 2015 Charles Fries
 
 *** END USER LICENSE AGREEMENT ***
 
@@ -410,23 +375,23 @@ THIS SOFTWARE AND THE ACCOMPANYING FILES ARE SOLD "AS IS" AND WITHOUT WARRANTIES
 
 5. CONSENT OF USE OF DATA
 
-You agree that Figure Inc. may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to Strum 1.0.Figure Inc. may also use this information to provide notices to you which may be of use or interest to you.</string>
+You agree that Figure Inc. may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to Strum 1.0.Figure Inc. may also use this information to provide notices to you which may be of use or interest to you.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4HP-HD-SX3" firstAttribute="leading" secondItem="Qne-xc-Ibg" secondAttribute="leadingMargin" constant="-20" id="bzY-pL-3Ez"/>
-                            <constraint firstItem="GvF-Xd-gVJ" firstAttribute="top" secondItem="4HP-HD-SX3" secondAttribute="bottom" id="idZ-DO-bPY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4HP-HD-SX3" secondAttribute="trailing" constant="-20" id="mIt-zn-mUN"/>
-                            <constraint firstItem="4HP-HD-SX3" firstAttribute="top" secondItem="Qne-xc-Ibg" secondAttribute="topMargin" id="pjh-bP-TcP"/>
+                            <constraint firstItem="4HP-HD-SX3" firstAttribute="top" secondItem="Qne-xc-Ibg" secondAttribute="top" id="81M-J5-fQE"/>
+                            <constraint firstItem="GvF-Xd-gVJ" firstAttribute="top" secondItem="4HP-HD-SX3" secondAttribute="bottom" id="Pqm-a1-XhA"/>
+                            <constraint firstItem="4HP-HD-SX3" firstAttribute="leading" secondItem="Qne-xc-Ibg" secondAttribute="leading" id="X69-K8-peh"/>
+                            <constraint firstAttribute="trailing" secondItem="4HP-HD-SX3" secondAttribute="trailing" id="m7c-88-jnl"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-a1-Mba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335" y="279"/>
+            <point key="canvasLocation" x="2334.5" y="278.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="14F-Ca-HjC">
@@ -465,10 +430,7 @@ You agree that Figure Inc. may collect and use information gathered in any manne
             <point key="canvasLocation" x="-175" y="1026"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Cover.jpg" width="1000" height="1000"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HUf-NZ-iNn"/>
+        <segue reference="3vV-Mc-T9v"/>
     </inferredMetricsTieBreakers>
 </document>
